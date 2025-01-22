@@ -6,10 +6,14 @@ export const findLogicalError = (error: unknown): LogicalError | undefined => {
   const { details } = (error || {}) as MaybeConnectError
 
   if (Array.isArray(details)) {
-    return details
-      .filter((detail) => detail.type === LogicalError.typeName)
-      .map((detail) => LogicalError.fromBinary(detail.value))
-      .at(0)
+    return (
+      details
+        // @ts-expect-error as type
+        .filter((detail) => detail.type === LogicalError.typeName)
+        // @ts-expect-error as type
+        .map((detail) => LogicalError.fromBinary(detail.value))
+        .at(0)
+    )
   }
 
   return undefined
