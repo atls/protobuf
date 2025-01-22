@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package tech.atls.rpc.v1alpha1;
+
+message LogicalError {
+  string id = 1;
+  string message = 2;
+}

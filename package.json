@@ -1,0 +1,24 @@
+{
+  "name": "protobuf",
+  "private": true,
+  "license": "BSD 3-Clause",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@atls/code-runtime": "2.1.2",
+    "@types/node": "22.10.2",
+    "eslint": "9.17.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "yarn@4.5.3",
+  "tools": {
+    "schematic": {
+      "collection": "@atls/schematics",
+      "schematic": "project",
+      "type": "libraries",
+      "migration": "1943133755669"
+    }
+  }
+}
