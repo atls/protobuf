@@ -1,0 +1,43 @@
+{
+  "name": "@atls/protobuf-rpc",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "files": [
+    "proto",
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn library build",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist",
+    "proto:generate": "buf generate proto",
+    "proto:lint": "buf lint proto"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.26.1",
+    "@bufbuild/protobuf": "^1.3.1",
+    "@bufbuild/protoc-gen-es": "^1.3.1"
+  },
+  "peerDependencies": {
+    "@bufbuild/protobuf": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      "./package.json": "./package.json",
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tech.atls.rpc.v1alpha1;
+
+import "tech/atls/rpc/v1alpha1/localized-message.proto";
+
+message ValidationErrorMessage {
+  string id = 1;
+  string constraint = 2;
+  repeated LocalizedMessage details = 3;
+}
+
+message ValidationError {
+  string id = 1;
+  string property = 2;
+  repeated ValidationErrorMessage messages = 3;
+}
