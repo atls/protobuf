@@ -15,22 +15,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/code-runtime@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@atls/code-runtime@npm:2.1.2"
+"@atls/code-runtime@npm:2.1.4":
+  version: 2.1.4
+  resolution: "@atls/code-runtime@npm:2.1.4"
   dependencies:
     "@atls/config-eslint": "npm:2.0.7"
+    "@atls/config-prettier": "npm:2.0.2"
+    "@atls/config-typescript": "npm:2.0.1"
     "@atls/webpack-proto-imports-loader": "npm:1.0.1"
     "@svgr/core": "npm:8.1.0"
     "@svgr/plugin-jsx": "npm:8.1.0"
     eslint: "npm:9.17.0"
     node-loader: "npm:2.0.0"
     null-loader: "npm:4.0.1"
+    strip-json-comments: "npm:3.1.1"
     ts-loader: "npm:9.5.1"
     ts-node: "npm:10.9.2"
     typescript: "npm:5.5.4"
     webpack: "npm:5.97.1"
-  checksum: 10/a5bd5b501359139e459cfa3cd22ca97b3f799e9be577c4aec82eb93a5a1dec83c21a4d4eb268e48a98003e5eabda623b8d2ce2c52c021e66b4409d3d517d5f4b
+  checksum: 10/1e15b5a724de1e0cfc430bd49b09c78764f23150a848d2213ba453e719fa7ec48ab10c67e4296908b42511d7a51d149b865a258f93b8c2ef6a577d77d93b3301
   languageName: node
   linkType: hard
 
@@ -69,6 +72,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/config-typescript@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@atls/config-typescript@npm:2.0.1"
+  checksum: 10/c5ab45783935031ab96b53857f246379e69b61304607048e39cae6067c08222725d19fb057f097ea233f1e5461b698b7f965f7061aff66b35a2bf18b3e6cd237
+  languageName: node
+  linkType: hard
+
 "@atls/protobuf-rpc@workspace:packages/protobuf-rpc":
   version: 0.0.0-use.local
   resolution: "@atls/protobuf-rpc@workspace:packages/protobuf-rpc"
@@ -78,6 +88,38 @@ __metadata:
     "@bufbuild/protoc-gen-es": "npm:^1.3.1"
   peerDependencies:
     "@bufbuild/protobuf": "*"
+  languageName: unknown
+  linkType: soft
+
+"@atls/protoc-gen-abstractions@workspace:packages/protoc-gen-abstractions":
+  version: 0.0.0-use.local
+  resolution: "@atls/protoc-gen-abstractions@workspace:packages/protoc-gen-abstractions"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^1.3.1"
+    "@bufbuild/protoplugin": "npm:^1.3.1"
+  peerDependencies:
+    "@bufbuild/protobuf": ^1
+  peerDependenciesMeta:
+    "@bufbuild/protobuf":
+      optional: true
+  bin:
+    protoc-gen-abstractions: bin/protoc-gen-abstractions
+  languageName: unknown
+  linkType: soft
+
+"@atls/protoc-gen-interfaces@workspace:packages/protoc-gen-interfaces":
+  version: 0.0.0-use.local
+  resolution: "@atls/protoc-gen-interfaces@workspace:packages/protoc-gen-interfaces"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^1.3.1"
+    "@bufbuild/protoplugin": "npm:^1.3.1"
+  peerDependencies:
+    "@bufbuild/protobuf": ^1
+  peerDependenciesMeta:
+    "@bufbuild/protobuf":
+      optional: true
+  bin:
+    protoc-gen-interfaces: bin/protoc-gen-interfaces
   languageName: unknown
   linkType: soft
 
@@ -389,7 +431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bufbuild/protoplugin@npm:1.10.0":
+"@bufbuild/protoplugin@npm:1.10.0, @bufbuild/protoplugin@npm:^1.3.1":
   version: 1.10.0
   resolution: "@bufbuild/protoplugin@npm:1.10.0"
   dependencies:
@@ -3470,7 +3512,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "protobuf@workspace:."
   dependencies:
-    "@atls/code-runtime": "npm:2.1.2"
+    "@atls/code-runtime": "npm:2.1.4"
     "@types/node": "npm:22.10.2"
     eslint: "npm:9.17.0"
     typescript: "npm:5.5.4"
@@ -3930,7 +3972,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-json-comments@npm:^3.1.1":
+"strip-json-comments@npm:3.1.1, strip-json-comments@npm:^3.1.1":
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: 10/492f73e27268f9b1c122733f28ecb0e7e8d8a531a6662efbd08e22cccb3f9475e90a1b82cab06a392f6afae6d2de636f977e231296400d0ec5304ba70f166443
