@@ -11,61 +11,13 @@ on:
   #     - '.github/**'
 
 jobs:
-  run:
-    name: Publish
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/create-github-app-token@v1
-        id: app-token
-        with:
-          app-id: ${{ inputs.appId }}
-          private-key: ${{ secrets.appPrivateKey }}
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          token: ${{ steps.app-token.outputs.token }}
-          fetch-depth: 0
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ inputs.node-version }}
-
-      - name: Yarn cache directory
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v4
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install
-        run: yarn install --inline-builds
-
-      - name: List changed workspaces
-        run: yarn workspaces changed list
-
-      - name: Version
-        run: yarn workspaces changed foreach -vpj 2 --no-private --exclude . version patch -i
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check versions
-        run: yarn workspaces foreach --no-private npm pkg get version
-# jobs:
-#   publish:
-#     if: github.event.pull_request.merged == true
-#     uses: atls/shared/.github/workflows/publish.yaml@master
-#     permissions: write-all
-#     with:
-#       appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
-#     secrets:
-#       appPrivateKey: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
-#       npmAuthToken: ${{ secrets.NPM_TOKEN }}
+  publish:
+    if: github.event.pull_request.merged == true
+    # uses: atls/shared/.github/workflows/publish.yaml@master
+    uses: .github/workflows/reusable-publish.yml
+    permissions: write-all
+    with:
+      appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
+    secrets:
+      appPrivateKey: ${{ secrets.ATLANTIS_SUPER_BOT_PRIVATE_KEY }}
+      npmAuthToken: ${{ secrets.NPM_TOKEN }}
