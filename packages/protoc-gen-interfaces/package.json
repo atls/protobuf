@@ -1,6 +1,6 @@
 {
   "name": "@atls/protoc-gen-interfaces",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "BSD-3-Clause",
   "bin": "bin/protoc-gen-interfaces",
   "files": [

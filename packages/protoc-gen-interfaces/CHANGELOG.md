@@ -1,5 +1,12 @@
 
 
+## [0.0.6](https://github.com/atls/protobuf/compare/@atls/protoc-gen-interfaces@0.0.5...@atls/protoc-gen-interfaces@0.0.6) (2025-02-27)
+
+
+
+
+
+
 ## [0.0.5](https://github.com/atls/protobuf/compare/@atls/protoc-gen-interfaces@0.0.5...@atls/protoc-gen-interfaces@0.0.5) (2025-02-27)
 
 
