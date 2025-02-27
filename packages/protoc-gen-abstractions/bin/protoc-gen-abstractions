@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+const { runNodeJs } = require('@bufbuild/protoplugin')
+const { protocGenAbstractions } = require('../dist/index.js')
+
+runNodeJs(protocGenAbstractions)

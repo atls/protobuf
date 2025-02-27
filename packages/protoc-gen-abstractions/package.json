@@ -1,0 +1,29 @@
+{
+  "name": "@atls/protoc-gen-abstractions",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "bin": "bin/protoc-gen-abstractions",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "yarn library build --module commonjs",
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
+  },
+  "dependencies": {
+    "@bufbuild/protoplugin": "^1.3.1"
+  },
+  "devDependencies": {
+    "@bufbuild/protobuf": "^1.3.1"
+  },
+  "peerDependencies": {
+    "@bufbuild/protobuf": "^1"
+  },
+  "peerDependenciesMeta": {
+    "@bufbuild/protobuf": {
+      "optional": true
+    }
+  }
+}
