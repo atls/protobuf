@@ -1,6 +1,6 @@
 {
   "name": "@atls/protoc-gen-abstractions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "BSD-3-Clause",
   "bin": "bin/protoc-gen-abstractions",
   "files": [
