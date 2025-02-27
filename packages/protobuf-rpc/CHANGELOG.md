@@ -1,3 +1,15 @@
+
+
+## [0.0.4](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.3...@atls/protobuf-rpc@0.0.4) (2025-02-27)
+
+
+### Features
+
+
+* **packages:** changelog ([1b6d634](https://github.com/atls/protobuf/commit/1b6d634cd140cfe76e8aab3b3d1639b6eab1524b))
+
+
+
 ## [0.0.3](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.2...@atls/protobuf-rpc@0.0.3) (2025-02-27)
 
 ## [0.0.2](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.2...@atls/protobuf-rpc@0.0.2) (2025-02-27)

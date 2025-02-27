@@ -1,3 +1,15 @@
+
+
+## [0.0.7](https://github.com/atls/protobuf/compare/@atls/protoc-gen-interfaces@0.0.6...@atls/protoc-gen-interfaces@0.0.7) (2025-02-27)
+
+
+### Features
+
+
+* **packages:** changelog ([1b6d634](https://github.com/atls/protobuf/commit/1b6d634cd140cfe76e8aab3b3d1639b6eab1524b))
+
+
+
 ## [0.0.6](https://github.com/atls/protobuf/compare/@atls/protoc-gen-interfaces@0.0.5...@atls/protoc-gen-interfaces@0.0.6) (2025-02-27)
 
 ## [0.0.5](https://github.com/atls/protobuf/compare/@atls/protoc-gen-interfaces@0.0.5...@atls/protoc-gen-interfaces@0.0.5) (2025-02-27)
