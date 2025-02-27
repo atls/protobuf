@@ -1,13 +1,14 @@
 name: Publish to registry
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-      - master
-    paths-ignore:
-      - '.github/**'
+  pull_request
+  # pull_request:
+  #   types:
+  #     - closed
+  #   branches:
+  #     - master
+  #   paths-ignore:
+  #     - '.github/**'
 
 jobs:
   publish:
