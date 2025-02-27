@@ -8,9 +8,9 @@
     "bin"
   ],
   "scripts": {
-    "build": "yarn library build -t dist",
-    "build:cjs": "yarn esbuild dist/esm/**/*.js --outdir=dist/cjs --format=cjs",
-    "prepack": "yarn run build",
+    "build": "yarn library build",
+    "build:cjs": "yarn esbuild dist/**/*.js --outdir=dist/cjs --format=cjs",
+    "prepack": "yarn run build && yarn run build:cjs",
     "postpack": "rm -rf dist"
   },
   "dependencies": {
