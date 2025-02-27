@@ -12,7 +12,7 @@ on:
 jobs:
   publish:
     if: github.event.pull_request.merged == true
-    uses: atls/shared/.github/workflows/publish.yaml@master
+    uses: ./.github/workflows/reusable-publish.yml
     permissions: write-all
     with:
       appId: ${{ vars.ATLANTIS_SUPER_BOT_APP_ID }}
