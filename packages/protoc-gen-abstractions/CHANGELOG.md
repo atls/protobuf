@@ -1,3 +1,5 @@
+## [0.0.2](https://github.com/atls/protobuf/compare/@atls/protoc-gen-abstractions@0.0.1...@atls/protoc-gen-abstractions@0.0.2) (2025-02-27)
+
 ## [0.0.1](https://github.com/atls/protobuf/compare/@atls/protoc-gen-abstractions@0.0.1...@atls/protoc-gen-abstractions@0.0.1) (2025-02-27)
 
 ## [0.0.1](https://github.com/atls/protobuf/compare/@atls/protoc-gen-abstractions@0.0.1...@atls/protoc-gen-abstractions@0.0.1) (2025-02-27)

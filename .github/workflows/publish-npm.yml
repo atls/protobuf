@@ -1,19 +1,17 @@
 name: Publish to registry
 
 on:
-  pull_request
-  # pull_request:
-  #   types:
-  #     - closed
-  #   branches:
-  #     - master
-  #   paths-ignore:
-  #     - '.github/**'
+  pull_request:
+    types:
+      - closed
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
 
 jobs:
   publish:
-    # if: github.event.pull_request.merged == true
-    # uses: atls/shared/.github/workflows/publish.yaml@master
+    if: github.event.pull_request.merged == true
     uses: ./.github/workflows/reusable-publish.yml
     permissions: write-all
     with:
