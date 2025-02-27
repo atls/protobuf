@@ -61,60 +61,60 @@ jobs:
         run: yarn workspaces changed list
 
       - name: Version
-        run: yarn workspaces changed foreach -vpj 2 --no-private --exclude . version patch -i
+        run: yarn workspaces changed foreach -vj --no-private --exclude . version patch -i
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get versions
         run: yarn workspaces foreach --no-private npm pkg get version
 
-      # - name: Changelog
-      #   if: ${{ !cancelled() }}
-      #   run: yarn workspaces changed foreach -vpj 2 --exclude . changelog generate
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #
-      # - name: Release
-      #   if: ${{ !cancelled() }}
-      #   run: yarn workspaces changed foreach -vpj 2 --exclude . release create
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #
-      # - name: Npm Publish
-      #   if: ${{ !cancelled() }}
-      #   run: yarn workspaces changed foreach -vpj 2 --no-private --exclude . npm publish --access public
-      #   env:
-      #     YARN_NPM_AUTH_TOKEN: ${{ secrets.npmAuthToken }}
-      #
-      # - name: Compose commit message
-      #   if: ${{ !cancelled() }}
-      #   id: commit_message
-      #   run: |
-      #     INITIAL_MESSAGE=$'chore(common): versions\n\n'
-      #     temp_file=$(mktemp)
-      #     yarn workspaces changed foreach -vpj 2 --exclude . exec "echo \"\$npm_package_name:\$npm_package_version \" >> $temp_file"
-      #     MESSAGE=$(cat $temp_file)
-      #     echo $(cat $temp_file)
-      #     INITIAL_MESSAGE+=$MESSAGE
-      #     INITIAL_MESSAGE="${INITIAL_MESSAGE//'%'/' '}"
-      #     INITIAL_MESSAGE="${INITIAL_MESSAGE//$'\n'/' '}"
-      #     INITIAL_MESSAGE="${INITIAL_MESSAGE//$'\r'/' '}"
-      #     echo "commitMessage=$INITIAL_MESSAGE" >> $GITHUB_OUTPUT
-      #     echo $INITIAL_MESSAGE
-      #     rm $temp_file
-      #
-      # - name: Stage all changelog files
-      #   if: ${{ !cancelled() }}
-      #   run: |
-      #     git add '*.md'
-      #
-      # - name: Commit changes
-      #   if: ${{ !cancelled() }}
-      #   uses: planetscale/ghcommit-action@v0.2.0
-      #   env:
-      #     GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-      #   with:
-      #     repo: ${{ github.repository }}
-      #     branch: master
-      #     commit_message: ${{ steps.commit_message.outputs.commitMessage }}
-      #     file_pattern: "*.json *.md *.yaml *.yml *.lock"
+      - name: Changelog
+        if: ${{ !cancelled() }}
+        run: yarn workspaces changed foreach -vj --exclude . changelog generate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release
+        if: ${{ !cancelled() }}
+        run: yarn workspaces changed foreach -vj --exclude . release create
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Npm Publish
+        if: ${{ !cancelled() }}
+        run: yarn workspaces changed foreach -vj --no-private --exclude . npm publish --access public
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.npmAuthToken }}
+
+      - name: Compose commit message
+        if: ${{ !cancelled() }}
+        id: commit_message
+        run: |
+          INITIAL_MESSAGE=$'chore(common): versions\n\n'
+          temp_file=$(mktemp)
+          yarn workspaces changed foreach -vpj 2 --exclude . exec "echo \"\$npm_package_name:\$npm_package_version \" >> $temp_file"
+          MESSAGE=$(cat $temp_file)
+          echo $(cat $temp_file)
+          INITIAL_MESSAGE+=$MESSAGE
+          INITIAL_MESSAGE="${INITIAL_MESSAGE//'%'/' '}"
+          INITIAL_MESSAGE="${INITIAL_MESSAGE//$'\n'/' '}"
+          INITIAL_MESSAGE="${INITIAL_MESSAGE//$'\r'/' '}"
+          echo "commitMessage=$INITIAL_MESSAGE" >> $GITHUB_OUTPUT
+          echo $INITIAL_MESSAGE
+          rm $temp_file
+
+      - name: Stage all changelog files
+        if: ${{ !cancelled() }}
+        run: |
+          git add '*.md'
+
+      - name: Commit changes
+        if: ${{ !cancelled() }}
+        uses: planetscale/ghcommit-action@v0.2.0
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+        with:
+          repo: ${{ github.repository }}
+          branch: master
+          commit_message: ${{ steps.commit_message.outputs.commitMessage }}
+          file_pattern: "*.json *.md *.yaml *.yml *.lock"
