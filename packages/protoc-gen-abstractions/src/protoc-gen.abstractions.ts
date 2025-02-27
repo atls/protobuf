@@ -1,25 +1,15 @@
 /* eslint-disable */
 
-// @ts-expect-error
 import type { DescEnum }      from '@bufbuild/protobuf'
-// @ts-expect-error
 import type { DescField }     from '@bufbuild/protobuf'
-// @ts-expect-error
 import type { DescMessage }   from '@bufbuild/protobuf'
-// @ts-expect-error
 import type { DescOneof }     from '@bufbuild/protobuf'
-// @ts-expect-error
 import type { GeneratedFile } from '@bufbuild/protoplugin/ecmascript'
-// @ts-expect-error
 import type { Printable }     from '@bufbuild/protoplugin/ecmascript'
-// @ts-expect-error
 import type { Schema }        from '@bufbuild/protoplugin/ecmascript'
 
-// @ts-expect-error
 import { getFieldTyping }     from '@bufbuild/protoplugin/ecmascript'
-// @ts-expect-error
 import { localName }          from '@bufbuild/protoplugin/ecmascript'
-// @ts-expect-error
 import { makeJsDoc }          from '@bufbuild/protoplugin/ecmascript'
 
 export function generateTs(schema: Schema) {

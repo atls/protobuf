@@ -8,15 +8,17 @@
     "bin"
   ],
   "scripts": {
-    "build": "yarn library build --module commonjs",
-    "prepack": "yarn run build",
+    "build": "yarn library build",
+    "build:cjs": "yarn esbuild dist/**/*.js --outdir=dist/cjs --format=cjs",
+    "prepack": "yarn run build && yarn run build:cjs",
     "postpack": "rm -rf dist"
   },
   "dependencies": {
     "@bufbuild/protoplugin": "^1.3.1"
   },
   "devDependencies": {
-    "@bufbuild/protobuf": "^1.3.1"
+    "@bufbuild/protobuf": "^1.3.1",
+    "esbuild": "0.25.0"
   },
   "peerDependencies": {
     "@bufbuild/protobuf": "^1"
