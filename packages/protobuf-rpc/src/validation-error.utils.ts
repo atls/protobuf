@@ -6,13 +6,9 @@ export const findValidationErrorDetails = (error: unknown): Array<ValidationErro
   const { details } = (error || {}) as MaybeConnectError
 
   if (Array.isArray(details)) {
-    return (
-      details
-        // @ts-expect-error as type
-        .filter((detail) => detail.type === ValidationError.typeName)
-        // @ts-expect-error as type
-        .map((detail) => ValidationError.fromBinary(detail.value))
-    )
+    return details
+      .filter((detail) => detail.type === ValidationError.typeName)
+      .map((detail) => ValidationError.fromBinary(detail.value))
   }
 
   return []
