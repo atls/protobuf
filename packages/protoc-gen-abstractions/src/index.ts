@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { createEcmaScriptPlugin } from '@bufbuild/protoplugin'
 
 import { generateTs }             from './protoc-gen.abstractions.js'
