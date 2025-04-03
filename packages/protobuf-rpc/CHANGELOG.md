@@ -1,5 +1,17 @@
 
 
+## [0.0.4](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.4...@atls/protobuf-rpc@0.0.4) (2025-04-03)
+
+
+### Bug Fixes
+
+
+* **protobuf-rpc:** gen files and publish config ([#7](https://github.com/atls/protobuf/issues/7)) ([9164d14](https://github.com/atls/protobuf/commit/9164d14513e1cf22f9a2a45db9f093208f791dad))
+
+
+
+
+
 ## [0.0.4](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.3...@atls/protobuf-rpc@0.0.4) (2025-02-27)
 
 
