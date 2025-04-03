@@ -4,8 +4,8 @@ on:
   workflow_call:
     inputs:
       node-version:
-        description: "Node version to run this workflow. Default: 22"
-        default: "22"
+        description: 'Node version to run this workflow. Default: 22'
+        default: '22'
         required: false
         type: string
       appId:
@@ -114,4 +114,4 @@ jobs:
           repo: ${{ github.repository }}
           branch: master
           commit_message: ${{ steps.commit_message.outputs.commitMessage }}
-          file_pattern: "*.json *.md *.yaml *.yml *.lock"
+          file_pattern: '*.json *.md *.yaml *.yml *.lock'
