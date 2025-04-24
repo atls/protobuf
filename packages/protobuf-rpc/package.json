@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "build": "yarn library build",
-    "build:cjs": "yarn esbuild dist/**/*.js --outdir=dist/cjs --format=cjs",
-    "prepack": "yarn run build && yarn run build:cjs",
+    "prepack": "yarn run build",
     "postpack": "rm -rf dist",
     "proto:generate": "buf generate",
     "proto:lint": "buf lint proto"
@@ -23,8 +22,7 @@
   "devDependencies": {
     "@bufbuild/buf": "1.51.0",
     "@bufbuild/protobuf": "1.10.0",
-    "@bufbuild/protoc-gen-es": "1.10.0",
-    "esbuild": "0.25.2"
+    "@bufbuild/protoc-gen-es": "1.10.0"
   },
   "peerDependencies": {
     "@bufbuild/protobuf": "*"
@@ -36,7 +34,6 @@
       ".": {
         "import": "./dist/index.js",
         "types": "./dist/index.d.ts",
-        "require": "./dist/cjs/index.js",
         "default": "./dist/index.js"
       }
     },
