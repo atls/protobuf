@@ -1,5 +1,17 @@
 
 
+## [0.0.6](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.5...@atls/protobuf-rpc@0.0.6) (2025-04-24)
+
+
+### Bug Fixes
+
+
+* **protobuf-rpc:** remove cjs build ([98fa995](https://github.com/atls/protobuf/commit/98fa995fb45fb8d02efa1f34cf79e97c43aa1f32))
+
+
+
+
+
 ## [0.0.5](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.4...@atls/protobuf-rpc@0.0.5) (2025-04-03)
 
 
