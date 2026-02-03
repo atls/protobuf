@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { runNodeJs } from '@bufbuild/protoplugin'
-import { protocGenConfig } from '../dist/index.js'
+const { runNodeJs } = require('@bufbuild/protoplugin')
+const { protocGenConfig } = require('../dist/index.js')
 
 runNodeJs(protocGenConfig)
