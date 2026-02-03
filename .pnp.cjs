@@ -23,6 +23,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/protoc-gen-abstractions"\
     },\
     {\
+      "name": "@atls/protoc-gen-config",\
+      "reference": "workspace:packages/protoc-gen-config"\
+    },\
+    {\
       "name": "@atls/protoc-gen-interfaces",\
       "reference": "workspace:packages/protoc-gen-interfaces"\
     }\
@@ -32,6 +36,7 @@ const RAW_RUNTIME_STATE =
   "fallbackExclusionList": [\
     ["@atls/protobuf-rpc", ["workspace:packages/protobuf-rpc"]],\
     ["@atls/protoc-gen-abstractions", ["workspace:packages/protoc-gen-abstractions"]],\
+    ["@atls/protoc-gen-config", ["workspace:packages/protoc-gen-config"]],\
     ["@atls/protoc-gen-interfaces", ["workspace:packages/protoc-gen-interfaces"]],\
     ["protobuf", ["workspace:."]]\
   ],\
@@ -160,6 +165,17 @@ const RAW_RUNTIME_STATE =
           ["@bufbuild/protobuf", "npm:1.10.0"],\
           ["@bufbuild/protoplugin", "npm:1.10.0"],\
           ["esbuild", "npm:0.25.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@atls/protoc-gen-config", [\
+      ["workspace:packages/protoc-gen-config", {\
+        "packageLocation": "./packages/protoc-gen-config/",\
+        "packageDependencies": [\
+          ["@atls/protoc-gen-config", "workspace:packages/protoc-gen-config"],\
+          ["@bufbuild/protobuf", "npm:1.10.0"],\
+          ["@bufbuild/protoplugin", "npm:1.10.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
