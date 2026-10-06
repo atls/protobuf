@@ -6,16 +6,21 @@
   "workspaces": [
     "packages/*"
   ],
+  "lint-staged": {
+    "*.{yml,yaml,json,graphql,md}": "yarn format",
+    "*.{js,mjs,cjs,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ],
+    "*.{test,spec}.{ts,tsx}": "yarn test unit"
+  },
   "devDependencies": {
-    "@atls/code-runtime": "2.1.4",
+    "@atls/raijin": "1.1.1",
     "@types/node": "22.10.2",
     "eslint": "9.17.0",
     "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.6.0",
-  "formatterIgnorePatterns": [
-    "**/*/CHANGELOG.md"
-  ],
+  "packageManager": "yarn@4.18.0",
   "tools": {
     "schematic": {
       "collection": "@atls/schematics",

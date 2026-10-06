@@ -1,0 +1,5 @@
+releases:
+  "@atls/protobuf-rpc": patch
+  "@atls/protoc-gen-abstractions": patch
+  "@atls/protoc-gen-config": patch
+  "@atls/protoc-gen-interfaces": patch
