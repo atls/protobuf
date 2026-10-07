@@ -20,13 +20,5 @@
     "eslint": "9.17.0",
     "typescript": "5.5.4"
   },
-  "packageManager": "yarn@4.18.0",
-  "tools": {
-    "schematic": {
-      "collection": "@atls/schematics",
-      "schematic": "project",
-      "type": "libraries",
-      "migration": "1943133755669"
-    }
-  }
+  "packageManager": "yarn@4.18.0"
 }
