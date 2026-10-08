@@ -19,7 +19,7 @@ export const packageName = '${serviceFile.proto.package}'
 
 export const serviceName = '${serviceFile.proto.service[0].name}'
 
-export const servicePath = path.join(dirname, '../${serviceFile?.name}.proto')
+export const servicePath = path.join(dirname, '../${serviceFile.name}.proto')
 
 export const includeDirs = [path.join(dirname, '../')]`)
 }

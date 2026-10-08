@@ -1,50 +1,26 @@
-
-
 ## [0.0.6](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.5...@atls/protobuf-rpc@0.0.6) (2025-04-24)
-
 
 ### Bug Fixes
 
-
-* **protobuf-rpc:** remove cjs build ([98fa995](https://github.com/atls/protobuf/commit/98fa995fb45fb8d02efa1f34cf79e97c43aa1f32))
-
-
-
-
+- **protobuf-rpc:** remove cjs build ([98fa995](https://github.com/atls/protobuf/commit/98fa995fb45fb8d02efa1f34cf79e97c43aa1f32))
 
 ## [0.0.5](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.4...@atls/protobuf-rpc@0.0.5) (2025-04-03)
 
-
 ### Bug Fixes
 
-
-* **protobuf-rpc:** gen files and publish config ([#7](https://github.com/atls/protobuf/issues/7)) ([9164d14](https://github.com/atls/protobuf/commit/9164d14513e1cf22f9a2a45db9f093208f791dad))
-
-
-
-
+- **protobuf-rpc:** gen files and publish config ([#7](https://github.com/atls/protobuf/issues/7)) ([9164d14](https://github.com/atls/protobuf/commit/9164d14513e1cf22f9a2a45db9f093208f791dad))
 
 ## [0.0.4](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.4...@atls/protobuf-rpc@0.0.4) (2025-04-03)
 
-
 ### Bug Fixes
 
-
-* **protobuf-rpc:** gen files and publish config ([#7](https://github.com/atls/protobuf/issues/7)) ([9164d14](https://github.com/atls/protobuf/commit/9164d14513e1cf22f9a2a45db9f093208f791dad))
-
-
-
-
+- **protobuf-rpc:** gen files and publish config ([#7](https://github.com/atls/protobuf/issues/7)) ([9164d14](https://github.com/atls/protobuf/commit/9164d14513e1cf22f9a2a45db9f093208f791dad))
 
 ## [0.0.4](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.3...@atls/protobuf-rpc@0.0.4) (2025-02-27)
 
-
 ### Features
 
-
-* **packages:** changelog ([1b6d634](https://github.com/atls/protobuf/commit/1b6d634cd140cfe76e8aab3b3d1639b6eab1524b))
-
-
+- **packages:** changelog ([1b6d634](https://github.com/atls/protobuf/commit/1b6d634cd140cfe76e8aab3b3d1639b6eab1524b))
 
 ## [0.0.3](https://github.com/atls/protobuf/compare/@atls/protobuf-rpc@0.0.2...@atls/protobuf-rpc@0.0.3) (2025-02-27)
 
